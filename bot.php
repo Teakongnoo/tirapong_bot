@@ -20,11 +20,11 @@ if ( sizeof($request_array['events']) > 0 ) {
         $reply_message = '';
         $reply_token = $event['replyToken'];
 
-        $text = $event['message']['text'];
+        
 //test///
-if($text="test"){
+if($text ="test"){
     $text = "Yes";
-}
+}else {$text = $event['message']['text'];}
 
         $data = [
             'replyToken' => $reply_token,
