@@ -22,7 +22,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 
         
 //test///
-if($text ="test"){
+if($text =="test"){
     $text = "Yes";
 }else {$text = $event['message']['text'];}
 
