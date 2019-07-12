@@ -21,6 +21,11 @@ if ( sizeof($request_array['events']) > 0 ) {
         $reply_token = $event['replyToken'];
 
         $text = $event['message']['text'];
+//test///
+if($text =="test"){
+    $text = "Yes";
+}else {$text = $event['message']['text'];}
+
         $data = [
             'replyToken' => $reply_token,
             // 'messages' => [['type' => 'text', 'text' => json_encode($request_array) ]]  Debug Detail message
@@ -34,7 +39,7 @@ if ( sizeof($request_array['events']) > 0 ) {
     }
 }
 
-echo "OK";
+echo " 55555 ";
 
 
 
@@ -50,8 +55,13 @@ function send_reply_message($url, $post_header, $post_body)
     $result = curl_exec($ch);
     curl_close($ch);
 
+<<<<<<< HEAD
     if($result="test"){
         $result = "Yes";
+=======
+    if($text="test"){
+        $text = "Yes";
+>>>>>>> 85b9b47906335ab4d170bcacd4a3c94d8c939fcd
     }
 
     return $result;
