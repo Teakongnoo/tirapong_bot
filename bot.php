@@ -2,8 +2,8 @@
 
 
 $API_URL = 'https://api.line.me/v2/bot/message';
-$ACCESS_TOKEN = 'rZ7/EDGJkjLRGFHD4+4T1FaJZVxe5JJBkD1jlIp65xVcBUeFbBw8MW7Izfa2uYZjbn6vD5DDKaPoEWKLtG/uDPknX/4RNK6OOg2QVSTJxeKFdWepRdtfaGAc5nC2MZ7RH2u7o5HaRh1o3ihFBKv75AdB04t89/1O/w1cDnyilFU='; 
-$channelSecret = '728f18ee485c1db8ed88b0ebf05b3ad5';
+$ACCESS_TOKEN = 'jMLXs4VLjiFgN3zrobgH1z/+DkFDrySHjn8D8dbhIVldXtlmxVOGFZMfVgP8G+E6NzQ8KTdcj4JjaFhj8Pit0sSBcIn6J6NiH1nLLWF6I4swppZmBwUNNvxNNc+4cQkD4E8VOCqfAMnyd4W6nB1kGAdB04t89/1O/w1cDnyilFU='; 
+$channelSecret = 'cb54572e6722177f5f61c39cd464e4b7';
 
 
 $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' . $ACCESS_TOKEN);
@@ -21,12 +21,23 @@ if ( sizeof($request_array['events']) > 0 ) {
         $reply_token = $event['replyToken'];
 
         $text = $event['message']['text'];
-//test///
-if($text =="test"){
+/*
+open database
+check keyword on database
+if yes
+   ans questiion
+else
+        find in google
+
+
+*/
+
+/* if($text =="test"){
     $text = "Yes";
 }else {$text = $event['message']['text'];}
+*/
 
-        $data = [
+$data = [
             'replyToken' => $reply_token,
             // 'messages' => [['type' => 'text', 'text' => json_encode($request_array) ]]  Debug Detail message
             'messages' => [['type' => 'text', 'text' => $text ]]
